@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="">
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: all ease .3s;
+            transform: rotate(0deg);
+        }
+
+        .circle {
+            border-radius: 50%;
+            background-color: green;
+            transform: rotate(760deg);
+        }
+
+        body {
+            background-color: #fff;
+            color: #000;
+        }
+
+        body.dark {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+    <button class="theme">Theme (Dark/Light)</button>
+    <!-- <div class="box"></div>
+    <br>
+    <button id="circle">Circle</button>
+    <button id="square">Square</button> -->
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem suscipit voluptatibus recusandae ab. Inventore
+        voluptatibus provident quibusdam nesciunt repellat ab deleniti placeat excepturi sint numquam commodi, obcaecati
+        quidem possimus rerum.</p>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(".theme").on("click", function () {
+            $("body").toggleClass("dark");
+        });
+
+
+
+        // $("#circle").on("click", function () {
+        //     $(".box").addClass("circle");
+        // });
+        // $("#square").on("click", function () {
+        //     $(".box").removeClass("circle");
+        // });
+
+
+
+
+
+        // // check jQuery
+        // if (window.jQuery) {
+        //     console.log("jQuery is loaded!");
+        // } else {
+        //     console.log("jQuery is not loaded!");
+        // }
+        // use javascript eventListner
+        // document.getElementById("btn").addEventListener("click", function () {
+
+        //     document.getElementById("btn").innerText = "clicked";
+        // });
+        // document.getElementById("btn-js").addEventListener("click", function () {
+
+        //     document.getElementById("btn-js").innerText = "clicked";
+        // });
+        // document.getElementById("btn").addEventListener("mouseover", function () {
+
+        //     document.getElementById("btn").innerText = "clicked";
+        // });
+        // document.getElementById("btn-js").addEventListener("mouseover", function () {
+
+        //     document.getElementById("btn-js").innerText = "clicked";
+        // });
+        // // use jQuery eventListner
+        // $('#btn-jquery, #btn-jquery-js').on('click mouseover', function () {
+        //     $(this).text("clicked");
+        // });
+
+
+    </script>
+</body>
+
+</html>
