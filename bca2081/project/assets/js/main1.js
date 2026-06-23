@@ -3,6 +3,10 @@ $(document).ready(function () {
         e.preventDefault();
         let data = $(this).serialize();
         console.log(data);
+        let action = $(':submit').val();
+        data = data + '&action=' + action;
+        console.log(data);
+
         $.ajax({
             url: './UserController.php',
             type: 'POST',

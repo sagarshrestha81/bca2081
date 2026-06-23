@@ -1,6 +1,7 @@
 <?php
 /* Database Connection */
-require_once './../connection/database.php';
+require_once './../database/connection.php';
+
 
 ?>
 
@@ -49,6 +50,3 @@ require_once './../connection/database.php';
         </div>
     </header>
     <main>
-
-
-
