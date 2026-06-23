@@ -13,6 +13,8 @@ $(document).ready(function () {
             data: data,
             success: function (response) {
                 console.log(response);
+                // check datatype
+                console.log(typeof response);
             }
         });
 

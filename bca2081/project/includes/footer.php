@@ -5,7 +5,7 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
 <!-- <script src="./../assets/js/main.js"></script> -->
-<script src="./../assets/js/main1.js" defer></script>
+<script src="./../assets/js/main2.js" defer></script>
 </body>
 
 </html>

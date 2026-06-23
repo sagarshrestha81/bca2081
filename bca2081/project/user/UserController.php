@@ -12,10 +12,23 @@ if (isset($_POST['action']) && $_POST['action'] == 'register') {
         $result = $conn->query($insert);
         // $result = mysqli_query($conn, $insert);
         if ($result) {
-            echo "result has been inserted";
+
+            $result = [
+                'responseCode'=>200,
+                'status'=>'success',
+                "message"=>"result has been inserted"
+            ];
+
+            echo  json_encode($result);
+
 
         } else {
-            echo "result has not been inserted";
+              $result = [
+                'responseCode'=>200,
+                'status'=>'error',
+                "message"=>"result has not been inserted"
+            ];
+               echo  json_encode($result);
 
         }
     }
