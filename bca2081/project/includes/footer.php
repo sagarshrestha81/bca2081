@@ -5,6 +5,15 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
 <!-- <script src="./../assets/js/main.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('.splide').mount();
+});
+</script>
 <script src="./../assets/js/main2.js" defer></script>
 </body>
 
