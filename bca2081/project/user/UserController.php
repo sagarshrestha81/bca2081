@@ -40,3 +40,52 @@ if (isset($_POST['action']) && $_POST['action'] == 'register') {
 
     }
 }
+
+if (isset($_POST['action']) && $_POST['action'] == 'login') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if ($email && $password) {
+        try {
+            $select = "SELECT * FROM users WHERE email = '$email'";
+            $result = $conn->query($select);
+            if ($result->num_rows == 0) {
+                $result = [
+                    'responseCode' => 200,
+                    'status' => 'error',
+                    "message" => "You are not registered"
+                ];
+
+            }
+            $select = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+            $result = $conn->query($select);
+            if ($result->num_rows > 0) {
+
+                $result = $result->fetch_assoc();
+                $fullname = $result['name'];
+                $_SESSION['email'] = $email;
+                $_SESSION['fullname'] = $fullname;
+                $_SESSION['login'] = true;
+
+                $result = [
+                    'responseCode' => 200,
+                    'status' => 'success',
+                    "message" => "You are login $fullname"
+                ];
+            } else {
+                $result = [
+                    'responseCode' => 200,
+                    'status' => 'error',
+                    "message" => "Invalid email or password"
+                ];
+            }
+        } catch (Exception $e) {
+            $result = [
+                'responseCode' => 200,
+                'status' => 'error',
+                "message" => "Something went wrong"
+            ];
+        }
+        echo json_encode($result);
+    }
+}
